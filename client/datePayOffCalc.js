@@ -36,22 +36,22 @@ while (curBalance>0){
 return {payoffDate:curDate,totalInterest:Math.round(totalIAccumulator*100)/100};
 }
 
- let exampleData = {
-    initLoanBal: 12794.87,
-    APR:3.5,
-    monthlyPayment:800,
-    initInterestBal : 40.18,
-    paymentDate :26
- }
+//  let exampleData = {
+//     initLoanBal: 12794.87,
+//     APR:3.5,
+//     monthlyPayment:800,
+//     initInterestBal : 40.18,
+//     paymentDate :26
+//  }
 
- let exampleData2 = {
-    initLoanBal: 38518.66,
-    APR:4,
-    monthlyPayment:400,
-    initInterestBal : 0,
-    paymentDate :17
- }
+//  let exampleData2 = {
+//     initLoanBal: 38518.66,
+//     APR:4,
+//     monthlyPayment:400,
+//     initInterestBal : 0,
+//     paymentDate :17
+//  }
 
-let {payoffDate,totalInterest} = caculatePayOff(exampleData2);
-console.log('pay off date:',payoffDate.getMonth()+1+'-'+payoffDate.getDate()+'-'+payoffDate.getFullYear());
-console.log('total interest paid', totalInterest)+'$';
+// let {payoffDate,totalInterest} = caculatePayOff(exampleData2);
+// console.log('pay off date:',payoffDate.getMonth()+1+'-'+payoffDate.getDate()+'-'+payoffDate.getFullYear());
+// console.log('total interest paid', totalInterest)+'$';
