@@ -1,4 +1,7 @@
 body,#root,.intro{
-    margin:auto;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:20px;
     font: 18px bold Source Sans Pro,sans-serif;
+    display:flex;
 }

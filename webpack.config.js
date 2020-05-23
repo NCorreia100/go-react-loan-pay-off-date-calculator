@@ -49,11 +49,8 @@ module.exports = {
   devtool: isProd ? 'none' : 'eval',
   target: 'web', 
   entry: {
-    'app-bundle':["@babel/polyfill",'whatwg-fetch','babel-plugin-es6-promise',path.resolve(__dirname,'src/index.js')],
-    'ion-bundle':["@babel/polyfill",'whatwg-fetch','babel-plugin-es6-promise',path.resolve(__dirname, 'src/casper-ion/app.jsx')],
-    'overrideTreg':["@babel/polyfill",'whatwg-fetch','babel-plugin-es6-promise',path.resolve(__dirname,'public/overrideTreg.js')],
-    'captureStyles':["@babel/polyfill",'whatwg-fetch','babel-plugin-es6-promise',path.resolve(__dirname,'public/captureStyles.js')]
-  },
+    'app-bundle':["@babel/polyfill",'whatwg-fetch','babel-plugin-es6-promise',path.resolve(__dirname,'client/app.jsx')],
+     },
   output: {
     path: DIST_DIR,
     filename: '[name].js',
@@ -180,9 +177,7 @@ module.exports = {
       new webpack.DefinePlugin(envVars.jsonVars),
       //copy directory
       new CopyDirectoryPlugin([
-        {from: path.resolve(__dirname,'public/hdn'), to: path.resolve(__dirname,'build/hdn')},
-        {from: path.resolve(__dirname,'public/css'), to: path.resolve(__dirname,'build/css')},
-        {from: path.resolve(__dirname,'public/images'), to: path.resolve(__dirname,'build/images')}
+        {from: path.resolve(__dirname,'public'), to: path.resolve(__dirname,'build')},
       ])
     ]
   

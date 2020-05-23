@@ -32,6 +32,6 @@ app.get('/*', function (req, res) {
   res.sendFile(path.join(__dirname, 'build', 'index.html'))
   
 });
-app.listen(process.env.REACT_APP_PORT, () => { 
-  console.log("CASPER server listening")
+app.listen(process.env.PORT, () => { 
+  console.log("CASPER server listening on port", process.env.PORT)
 });
