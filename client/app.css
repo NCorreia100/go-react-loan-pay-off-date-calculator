@@ -1,34 +1,64 @@
 .app-div{
     margin:auto;
+    text-align:center;
 }
 
 .title{
+    margin-top:3em;
     font: 30px Bold Source Sans Pro, sans-serif;
 }
 .table{
     margin:auto;
-    max-width:500px;
-    background-color:#c1c1c1;
+    margin-top:2em;
+    max-width:700px;
+    border-radius: 5%;
+    border:2px solid #c1c1c1;
+    padding: 2em 1em 2em 1em;
 }
 
 .tr{
-    display:inline-flex;
-    justify-content: space-evenly;
+    display: flex;
+    justify-content: flex-end;
+    margin-top:.5em;
+    /* border-top: 1px solid #c1c1c1;
+    border-bottom: 1px solid #c1c1c1; */
+   
 }
 .col-prompt{
     font: 18px normal Source Sans Pro, sans-serif;
 }
 
-.col-answer input{
+.table input{
     font: 16px italic Source Sans Pro, sans-serif;
+    margin-left:12px;
+    padding-left:7px;
+    border-radius: 5%;
+
+}
+.error-feedback{
+    margin-top:1em;
+    font: 16px italic Source Sans Pro, sans-serif;
+    color:red;
+
 }
 .btn-submit{
+    margin-top:2em;
+    max-width:350px;
     width:85%;
     padding-top: 7px;
     padding-bottom: 7px;
     color:white;
     background-color: darkred;
 }
+.result-container{
+    margin-top:1em;
+    border: 1px solid green; 
+    max-width:700px;
+    border-radius: 5%;
+    border-radius: 45%;
+    padding: 1em .5em 1em .5em;
+    line-height: 6px;
+}
 .result{
-    font: 20px bold Source Sans Pro, sans-serif;
+    font: 20px normal Source Sans Pro, sans-serif;
 }

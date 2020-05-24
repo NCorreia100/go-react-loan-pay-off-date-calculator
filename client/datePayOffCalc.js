@@ -19,6 +19,7 @@ let iAccumulator = initInterestBal||0; //interest accumulated over the course of
 let totalIAccumulator = initInterestBal;
 let curBalance = initLoanBal; //at the beggining of the month
 let curDate = initDate;
+let paymentsQty=0;
 
 while (curBalance>0){
     //increment date
@@ -31,9 +32,10 @@ while (curBalance>0){
         curBalance = curBalance + iAccumulator - monthlyPayment;
         console.log(curDate.getMonth()+'-'+curDate.getDate()+'-'+curDate.getFullYear(),'interest acc',Math.round(iAccumulator*100)/100,'monthly bal',Math.round(curBalance*100)/100);
         iAccumulator=0;        
+        paymentsQty++;
     }    
 }
-return {payoffDate:curDate,totalInterest:Math.round(totalIAccumulator*100)/100};
+return {payoffDate:curDate,totalInterest:Math.round(totalIAccumulator*100)/100,paymentsQty};
 }
 
 //  let exampleData = {
